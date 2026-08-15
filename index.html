@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VS&I Student ID Card Generator</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="topbar no-print">
+  <div class="brand">
+    <img id="headerLogo" src="assets/company-logo.png" alt="Company Logo">
+    <div>
+      <h1>VS&I STUDENT ID CARD</h1>
+      <p>VARANASI SOFTWARES AND INNOVATIONS PVT LTD • MIRZAPUR</p>
+    </div>
+  </div>
+  <div class="actions">
+    <button class="btn btn-secondary" id="resetBtn">RESET</button>
+    <button class="btn btn-primary" id="printBtn">PRINT A4</button>
+  </div>
+</header>
+
+<main class="layout no-print">
+
+  <aside class="editor">
+    <div class="section-head">
+      <div class="number">01</div>
+      <div>
+        <h2>Student Details</h2>
+        <p>Enter student information</p>
+      </div>
+    </div>
+
+    <div class="field full">
+      <label>Student Name</label>
+      <input id="studentName" value="RAHUL KUMAR" maxlength="30">
+    </div>
+
+    <div class="grid2">
+      <div class="field">
+        <label>Student ID</label>
+        <input id="studentId" value="VSI-STU-001">
+      </div>
+      <div class="field">
+        <label>Roll No.</label>
+        <input id="rollNo" value="2026-001">
+      </div>
+    </div>
+
+    <div class="field">
+      <label>Father's Name</label>
+      <input id="fatherName" value="MR. RAJ KUMAR">
+    </div>
+
+    <div class="grid2">
+      <div class="field">
+        <label>Course</label>
+        <input id="course" value="DIPLOMA IN CSE">
+      </div>
+      <div class="field">
+        <label>Semester</label>
+        <input id="semester" value="3rd SEM">
+      </div>
+    </div>
+
+    <div class="field">
+      <label>Department</label>
+      <input id="department" value="COMPUTER SCIENCE & ENGINEERING">
+    </div>
+
+    <div class="grid2">
+      <div class="field">
+        <label>Session</label>
+        <input id="session" value="2026-27">
+      </div>
+      <div class="field">
+        <label>Blood Group</label>
+        <input id="blood" value="O+">
+      </div>
+    </div>
+
+    <div class="field">
+      <label>Mobile Number</label>
+      <input id="mobile" value="+91 98765 43210">
+    </div>
+
+    <div class="grid2">
+      <div class="field">
+        <label>Date of Birth</label>
+        <input id="dob" value="15-08-2005">
+      </div>
+      <div class="field">
+        <label>Valid Upto</label>
+        <input id="valid" value="31-07-2027">
+      </div>
+    </div>
+
+    <div class="upload">
+      <label>Student Photo</label>
+      <input id="studentPhoto" type="file" accept="image/*">
+      <small>Passport-size photo recommended</small>
+    </div>
+
+    <div class="upload">
+      <label>Company / Institute Logo</label>
+      <input id="companyLogo" type="file" accept="image/*">
+      <small>Default VS&I logo is already loaded</small>
+    </div>
+
+    <div class="notice">
+      <b>PRINT SIZE</b>
+      <span>85 × 54 mm • A4 • 100% scale</span>
+    </div>
+  </aside>
+
+  <section class="preview">
+    <div class="tip">
+      <b>PRINT TIP:</b> Chrome Print → <b>Colour</b> → <b>Background graphics ON</b> → <b>Scale 100%</b>.
+    </div>
+
+    <div class="preview-head">
+      <div>
+        <span>LIVE PREVIEW</span>
+        <h2>Premium Student ID Card</h2>
+      </div>
+      <b>85 × 54 MM</b>
+    </div>
+
+    <div class="cards">
+
+      <!-- FRONT -->
+      <article class="id-card front" id="frontCard">
+        <div class="top-line"></div>
+
+        <header class="card-head">
+          <div class="logo-circle">
+            <img id="logoFront" src="assets/company-logo.png" alt="">
+          </div>
+          <div class="institute">
+            <strong>VARANASI SOFTWARES</strong>
+            <strong>AND INNOVATIONS PVT LTD</strong>
+            <small>MIRZAPUR • UTTAR PRADESH</small>
+          </div>
+          <div class="student-tag">STUDENT</div>
+        </header>
+
+        <div class="front-content">
+          <div class="photo-box">
+            <img id="photoFront" alt="Student Photo">
+            <span id="photoPlaceholder">PHOTO</span>
+            <i>STUDENT</i>
+          </div>
+
+          <div class="student-info">
+            <small class="label">STUDENT NAME</small>
+            <h3 id="pName">RAHUL KUMAR</h3>
+            <strong class="course" id="pCourse">DIPLOMA IN CSE</strong>
+
+            <div class="rows">
+              <div><span>STUDENT ID</span><b id="pStudentId">VSI-STU-001</b></div>
+              <div><span>ROLL NO.</span><b id="pRoll">2026-001</b></div>
+              <div><span>DEPARTMENT</span><b id="pDepartment">CSE</b></div>
+              <div><span>SESSION</span><b id="pSession">2026-27</b></div>
+            </div>
+          </div>
+        </div>
+
+        <footer class="front-footer">
+          <span>CODING • LEARNING • CREATING FUTURE</span>
+          <b>VS&I</b>
+        </footer>
+      </article>
+
+      <!-- BACK -->
+      <article class="id-card back" id="backCard">
+        <header class="back-head">
+          <div class="back-logo">
+            <img id="logoBack" src="assets/company-logo.png" alt="">
+          </div>
+          <div>
+            <strong>VARANASI SOFTWARES AND INNOVATIONS PVT LTD</strong>
+            <small>STUDENT IDENTITY CARD • MIRZAPUR</small>
+          </div>
+        </header>
+
+        <div class="back-content">
+          <div class="id-pill">
+            <span>STUDENT ID</span>
+            <b id="bStudentId">VSI-STU-001</b>
+          </div>
+          <div class="blood-pill">
+            <span>BLOOD GROUP</span>
+            <b id="bBlood">O+</b>
+          </div>
+
+          <div class="details">
+            <div><span>FATHER'S NAME</span><b id="bFather">MR. RAJ KUMAR</b></div>
+            <div><span>DATE OF BIRTH</span><b id="bDob">15-08-2005</b></div>
+            <div><span>MOBILE</span><b id="bMobile">+91 98765 43210</b></div>
+            <div><span>VALID UPTO</span><b id="bValid">31-07-2027</b></div>
+          </div>
+
+          <div class="address">
+            <span>INSTITUTE / COMPANY</span>
+            <b>VARANASI SOFTWARES AND INNOVATIONS PVT LTD, MIRZAPUR, UTTAR PRADESH</b>
+          </div>
+
+          <p class="rules">
+            This card is the property of the institute/company. The card holder must carry this card while attending classes, training or official activities. If found, please return it to the issuing office.
+          </p>
+
+          <div class="barcode-wrap">
+            <div id="barcode"></div>
+            <small id="barcodeText">VSI-STU-001</small>
+          </div>
+
+          <div class="signatures">
+            <div><i></i><span>STUDENT SIGNATURE</span></div>
+            <div><i></i><span>AUTHORIZED SIGNATORY</span></div>
+          </div>
+        </div>
+
+        <footer class="back-footer">OFFICIAL STUDENT IDENTIFICATION • VS&I</footer>
+      </article>
+
+    </div>
+  </section>
+</main>
+
+<section class="print-sheet" id="printSheet">
+  <div class="print-title">VARANASI SOFTWARES AND INNOVATIONS PVT LTD</div>
+  <div class="print-subtitle">STUDENT ID CARD • 85 × 54 MM</div>
+  <div class="print-grid">
+    <div id="printFront"></div>
+    <div id="printBack"></div>
+  </div>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
